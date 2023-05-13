@@ -44,7 +44,39 @@ The singing voice conversion model uses SoftVC content encoder to extract source
   
 ## 💬 About Python Version
 
-I use conda '''create -n env_name to install, so it is python 3.10''', and it can work smoothly. If you encounter other problems, try to use python 3.8.9
+I use `conda create -n env_name to install, so it is python 3.10`, and it can work smoothly. If you encounter other problems, try to use `python 3.8.9`
+
+##     Manual installation
+Anaconda: 
+
+```
+conda create -n so-vits-svc-fork python=3.10 pip
+conda activate so-vits-svc-fork
+```
+
+Installing without creating a virtual environment may cause a PermissionError if Python is installed in Program Files, etc.
+
+Install this via pip (or your favourite package manager that uses pip):
+
+```
+python -m pip install -U pip setuptools wheel
+pip install -r requirements.txt
+```
+
+${\color{red} Directly\ using\ the\ one\ provided\ by\ github\ does\ not\ work\ properly\ on\ my\ computer!!!}$ 
+
+```pip install -U torch torchaudio --index-url https://download.pytorch.org/whl/cu118```
+
+What this project requires is
+torch==1.10.0+cu113
+torchaudio==0.10.0+cu113
+1.10.0 and 0.10.0 indicate the pytorch version, and cu113 indicates the cuda version 11.3
+By analogy, please choose the version that suits you to install.
+
+- torch-1.13.0+cu117 click to download: [torch-1.13.0+cu117-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu117/torch-1.13.0%2Bcu117-cp310-cp310-win_amd64.whl)
+- torchaudio-0.13.0+cu117 click to download: [torchaudio-0.13.0+cu117-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu117/torchaudio-0.13.0%2Bcu117-cp310-cp310-win_amd64.whl)
+- torchvision-0.14.0+cu117 click to download: [torchvision-0.14.0+cu117-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu117/torchvision-0.14.0%2Bcu117-cp310-cp310-win_amd64.whl)
+
 
 ## 📥 Pre-trained Model Files
 
