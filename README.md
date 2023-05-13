@@ -1,7 +1,6 @@
 # SoftVC VITS Singing Voice Conversion
 
-In the field of Singing Voice Conversion, there is not only one project, SoVitsSvc, but also many other projects, which will not be listed here. The project was officially discontinued for maintenance and Archived.
-However, there are still other enthusiasts who have created their own branches and continue to maintain the SoVitsSvc project (still unrelated to SvcDevelopTeam and the repository maintainers) and have made some big changes to it for you to find out for yourself.
+This is an application based on so-vits-svc, so using github on the Internet to install it on my local machine was not successful, so I recorded some steps and instructions for my successful installation on this github.
 
 #### ✨ A fork with a greatly improved interface: [34j/so-vits-svc-fork](https://github.com/34j/so-vits-svc-fork)
 
@@ -11,7 +10,7 @@ However, there are still other enthusiasts who have created their own branches a
 
 ## Disclaimer
 
-This project is an open source, offline project, and all members of SvcDevelopTeam and all developers and maintainers of this project (hereinafter referred to as contributors) have no control over this project.  The contributor of this project has never provided any organization or individual with any form of assistance, including but not limited to data set extraction, data set processing, computing support, training support, infering, etc.  Contributors to the project do not and cannot know what users are using the project for.  Therefore, all AI models and synthesized audio based on the training of this project have nothing to do with the contributors of this project.  All problems arising therefrom shall be borne by the user.
+This project is an open source, offline project. Contributors to this project will not provide any form of help to any organization or individual, including but not limited to dataset extraction, dataset processing, computing support, training support, reasoning, etc. Project contributors do not know and cannot know what users are using the project for. Therefore, all AI models and synthesized audio based on the training of this project have nothing to do with the contributors of this project. All problems arising therefrom shall be borne by the users themselves.
 
 This project is run completely offline and cannot collect any user information or obtain user input data. Therefore, contributors to this project are not aware of all user input and models and therefore are not responsible for any user input.
 
@@ -19,26 +18,14 @@ This project is only a framework project, which does not have the function of sp
 
 ## 📏 Terms of Use
 
-# Warning: Please solve the authorization problem of the dataset on your own. You shall be solely responsible for any problems caused by the use of non-authorized datasets for training and all consequences thereof.The repository and its maintainer, svc develop team, have nothing to do with the consequences!
+# Warning: Please solve the authorization problem of the dataset on your own. You shall be solely responsible for any problems caused by the use of non-authorized datasets for training and all consequences thereof.The repository and its maintainer has nothing to do with the consequences!
 
 1. This project is established for academic exchange purposes only and is intended for communication and learning purposes. It is not intended for production environments. 
-2. Any videos based on sovits that are published on video platforms must clearly indicate in the description that they are used for voice changing and specify the input source of the voice or audio, for example, using videos or audios published by others and separating the vocals as input source for conversion, which must provide clear original video or music links. If your own voice or other synthesized voices from other commercial vocal synthesis software are used as the input source for conversion, you must also explain it in the description.
+2. Any videos based on sovits that are published on video platforms must clearly indicate in the description that they are used for voice changing and ${\color{red} specify\ the\ input\ source\ of\ the\ voice\ or\ audio}$, for example, using videos or audios published by others and separating the vocals as input source for conversion, ${\color{red} which\ must\ provide\ clear\ original\ video\ or\ music\ links}$. If your own voice or other synthesized voices from other commercial vocal synthesis software are used as the input source for conversion, you must also explain it in the description.
 3. You shall be solely responsible for any infringement problems caused by the input source. When using other commercial vocal synthesis software as input source, please ensure that you comply with the terms of use of the software. Note that many vocal synthesis engines clearly state in their terms of use that they cannot be used for input source conversion.
 4. It is forbidden to use the project to engage in illegal activities, religious and political activities. The project developers firmly resist the above activities. If they do not agree with this article, the use of the project is prohibited.
 5. Continuing to use this project is deemed as agreeing to the relevant provisions stated in this repository README. This repository README has the obligation to persuade, and is not responsible for any subsequent problems that may arise.
 6. If you use this project for any other plan, please contact and inform the author of this repository in advance. Thank you very much.
-
-## 🆕 Update!
-
-> Updated the 4.0-v2 model, the entire process is the same as 4.0. Compared to 4.0, there is some improvement in certain scenarios, but there are also some cases where it has regressed. Please refer to the [4.0-v2 branch](https://github.com/svc-develop-team/so-vits-svc/tree/4.0-v2) for more information.
-
-## 📝 4.0 Feature list of branches
-
-| Branch        |     Feature      |  whether compatible with the main branch model |
-| :-------------: | :----------: | :------------:    |
-| 4.0              |   main branch   |        -     |
-| 4.0v2        |  The VISinger2 model is used  |        incompatibility     |
-| 4.0-Vec768-Layer12    |  The feature input is the Layer 12 Transformer output of the Content Vec  |       incompatibility     |
 
 ## 📝 Model Introduction
 
@@ -57,7 +44,7 @@ The singing voice conversion model uses SoftVC content encoder to extract source
   
 ## 💬 About Python Version
 
-After conducting tests, we believe that the project runs stably on `Python 3.8.9`.
+I use conda '''create -n env_name to install, so it is python 3.10''', and it can work smoothly. If you encounter other problems, try to use python 3.8.9
 
 ## 📥 Pre-trained Model Files
 
@@ -286,7 +273,3 @@ For some reason the author deleted the original repository. Because of the negli
 
 #### 《[中华人民共和国民法典](http://gongbao.court.gov.cn/Details/51eb6750b8361f79be8f90d09bc202.html)》
 
-## 💪 Thanks to all contributors for their efforts
-<a href="https://github.com/svc-develop-team/so-vits-svc/graphs/contributors" target="_blank">
-  <img src="https://contrib.rocks/image?repo=svc-develop-team/so-vits-svc" />
-</a>
