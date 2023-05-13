@@ -73,10 +73,21 @@ torchaudio==0.10.0+cu113
 1.10.0 and 0.10.0 indicate the pytorch version, and cu113 indicates the cuda version 11.3
 By analogy, please choose the version that suits you to install.
 
+
 - torch-1.13.0+cu117 click to download: [torch-1.13.0+cu117-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu117/torch-1.13.0%2Bcu117-cp310-cp310-win_amd64.whl)
 - torchaudio-0.13.0+cu117 click to download: [torchaudio-0.13.0+cu117-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu117/torchaudio-0.13.0%2Bcu117-cp310-cp310-win_amd64.whl)
 - torchvision-0.14.0+cu117 click to download: [torchvision-0.14.0+cu117-cp310-cp310-win_amd64.whl](https://download.pytorch.org/whl/cu117/torchvision-0.14.0%2Bcu117-cp310-cp310-win_amd64.whl)
 
+[FFmpeg](https://ffmpeg.org/): 
+
+I don’t know what’s the use of installing this. Not all github require this installation, but the installation is relatively simple. After downloading a zip file, unzip it at any location, and then add the absolute path of the decompressed `bin folder` to the environment variable.
+
+After the installation is complete, enter `ffmpeg -version` in the cmd console, and if something appears, the installation is successful.
+
+Finally: 
+```pip install -U so-vits-svc-fork```
+
+So far all the dependencies are installed, next training needs to prepare the `dataset` and `pre-training model`, the dataset can be collect on youtube, the download format is mp3. Then use `Ultimate Vocal Remover` to separate the vocals and music, and convert the vocals to wav format and divided into 5-10 seconds into a small piece of audio (so-vits-svc provides a py. script). Then download all the pre-trained models and place them in the correct folder to start training. The training time takes my RTX2070 super as an example , each epochs is about 200 seconds, and each epochs is 200 steps, so training for 24 hours is about 80000 steps.
 
 ## 📥 Pre-trained Model Files
 
