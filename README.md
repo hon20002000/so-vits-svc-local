@@ -96,20 +96,12 @@ So far all the dependencies are installed, next training needs to prepare the `d
 - ContentVec: [checkpoint_best_legacy_500.pt](https://ibm.box.com/s/z1wgl1stco8ffooyatzdwsqn2psd9lrr)
   - Place it under the `hubert` directory
 
-```shell
-# contentvec
-wget -P hubert/ http://obs.cstcloud.cn/share/obs/sankagenkeshi/checkpoint_best_legacy_500.pt
-# Alternatively, you can manually download and place it in the hubert directory
-```
-
 #### **Optional(Strongly recommend)**
 
-- Pre-trained model files: `G_0.pth` `D_0.pth`
+- Pre-trained model files: [G_0.pth](https://drive.google.com/file/d/1a9TIprkdoMw9a-P5-tWOJSszI6uYcJBP/view?usp=share_link), [D_0.pth](https://drive.google.com/file/d/1zYTYwnqhJibAHm5vZjBgbZE5f7feTw-z/view?usp=share_link)
   - Place them under the `logs/44k` directory
 
-Get them from svc-develop-team(TBD) or anywhere else.
-
-Although the pretrained model generally does not cause any copyright problems, please pay attention to it. For example, ask the author in advance, or the author has indicated the feasible use in the description clearly.
+Get them my google drive or in the huggingface.
 
 #### **Optional(Select as Required)**
 
@@ -128,17 +120,19 @@ https://github.com/openvpi/vocoders/releases/download/nsf-hifigan-v1/nsf_hifigan
 ## 📊 Dataset Preparation
 
 Simply place the dataset in the `dataset_raw` directory with the following file structure.
-
+Add a folder with singer name in dataset_raw, and put wav audio sources in it, the length of these audio sources should be cut to within 5-10 seconds, otherwise the memory will not be enough.
+Because the Vocal Remover on the Internet are only free for one time use, you can download and install [Ultimate Vocal Remover](https://ultimatevocalremover.com/), and the settings are as shown in the figure. 
+![Alt text](https://imgur.com/gallery/bylaNu6 "Title")
 ```
 dataset_raw
 ├───speaker0
-│   ├───xxx1-xxx1.wav
+│   ├───xxx_(Vocals).wav
 │   ├───...
-│   └───Lxx-0xx8.wav
+│   └───xxx_(Vocals).wav
 └───speaker1
-    ├───xx2-0xxx2.wav
+    ├───xxx_(Vocals).wav
     ├───...
-    └───xxx7-xxx007.wav
+    └───xxx_(Vocals).wav
 ```
 
 You can customize the speaker name.
@@ -146,9 +140,9 @@ You can customize the speaker name.
 ```
 dataset_raw
 └───suijiSUI
-    ├───1.wav
+    ├───xxx_(Vocals).wav
     ├───...
-    └───25788785-20221210-200143-856_01_(Vocals)_0_0.wav
+    └───xxx_(Vocals).wav
 ```
 
 ## 🛠️ Preprocessing
