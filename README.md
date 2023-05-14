@@ -122,7 +122,13 @@ https://github.com/openvpi/vocoders/releases/download/nsf-hifigan-v1/nsf_hifigan
 Simply place the dataset in the `dataset_raw` directory with the following file structure.
 Add a folder with singer name in dataset_raw, and put wav audio sources in it, the length of these audio sources should be cut to within 5-10 seconds, otherwise the memory will not be enough.
 Because the Vocal Remover on the Internet are only free for one time use, you can download and install [Ultimate Vocal Remover](https://ultimatevocalremover.com/), and the settings are as shown in the figure. 
-![Alt text](https://imgur.com/gallery/bylaNu6 "Title")
+
+<img
+  src=/image/Ultimate_Vocal_Remover_Setting.png
+  alt="Alt text"
+  title="Setting"
+  style="display: inline-block; margin: 0 auto; width: 50%">
+ 
 ```
 dataset_raw
 ├───speaker0
